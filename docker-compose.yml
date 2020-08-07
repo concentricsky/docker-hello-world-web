@@ -1,0 +1,15 @@
+version: '2.4'
+services:
+  web:
+    build:
+      context: .
+    environment:
+      - "CONTEXT=/badgrpro/west-us/azuire"
+      - "FOO=foo"
+      - "BAR=bar"
+    expose:
+      - 80
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
